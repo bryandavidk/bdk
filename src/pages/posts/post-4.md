@@ -1,6 +1,6 @@
 ---
 title: 'Claude wrote the first three, but this one is mine'
-pubDate: 2026-03-06
+pubDate: today
 description: 'I'm trying to get used to using Claude, Zed, and Astro'
 author: 'bryandavidk - Astro Learner'
 image:
@@ -11,7 +11,7 @@ tags: ["astro", "learning in public", "setbacks", "community"]
 
 # Claude wrote the first three, but this one is mine
 
-Published on: 2026-03-06
+Published on: today
 
 I'm trying to get used to using Claude, Zed, and Astro
 
