@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Claude wrote the first three, but this one is mine'
 pubDate: 2026-03-06
 description: 'I am trying to get used to using Claude, Zed, and Astro'
