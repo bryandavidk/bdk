@@ -1,7 +1,7 @@
 ---
 title: 'Claude wrote the first three, but this one is mine'
 pubDate: 2026-03-06
-description: 'I'm trying to get used to using Claude, Zed, and Astro'
+description: 'I am trying to get used to using Claude, Zed, and Astro'
 author: 'bryandavidk - Astro Learner'
 image:
     url: 'https://docs.astro.build/assets/rays.webp'
