@@ -1,26 +1,9 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} >
 
-    <title>Home</title>
-  </head>
-  <body>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
-      <h1>Home</h1>
-      <h2>... and my new Astro site!</h2>
-      <p>I've used <a href="https://claude.com">Claude Code</a>, <a href="https://zed.dev">Zed editor</a>, and <a href="https://astro.build/">Astro</a> to build this site. Soon, I might install <a href="https://tina.io/">Tina CMS</a> because so far, I really like working with <a href="https://daringfireball.net/projects/markdown/index.text">Markdown files.</a></p>
-  </body>
-</html>
+<Layout title="Home">
+  <h1>Home</h1>
+  <h2>... and my new Astro site!</h2>
+  <p>I've used <a href="https://claude.com">Claude Code</a>, <a href="https://zed.dev">Zed editor</a>, and <a href="https://astro.build/">Astro</a> to build this site. Soon, I might install <a href="https://tina.io/">Tina CMS</a> because so far, I really like working with <a href="https://daringfireball.net/projects/markdown/index.text">Markdown files.</a></p>
+</Layout>

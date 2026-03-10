@@ -1,34 +1,23 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+
 const allPosts = await Astro.glob('./posts/*.md');
 const sortedPosts = allPosts.sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} >
 
-    <title>Blog</title>
-  </head>
-  <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <h1>Blog</h1>
-    <h2>My Astro Learning Blog</h2>
-    <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-      {sortedPosts.map((post) => (
-        <li>
-          <a href={post.url}>{post.frontmatter.title}</a>
-          <p>{new Date(post.frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-          <p>{post.frontmatter.description}</p>
-        </li>
-      ))}
-    </ul>
-  </body>
-</html>
+<Layout title="Blog">
+  <h1>Blog</h1>
+  <h2>My Astro Learning Blog</h2>
+  <p>This is where I will post about my journey learning Astro.</p>
+  <ul>
+    {sortedPosts.map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title}</a>
+        <p>{new Date(post.frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p>{post.frontmatter.description}</p>
+      </li>
+    ))}
+  </ul>
+</Layout>

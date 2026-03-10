@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
 
+/* --- Reset & Base --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --color-primary: #3b82f6;
   --color-secondary: #6366f1;
@@ -10,10 +18,145 @@
   --color-text-muted: #6b7280;
   --color-border: #e5e7eb;
 
+  --max-width: 1200px;
+  --padding-inline: 1.5rem;
+
   font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
+  margin: 0;
   background-color: var(--color-background);
   color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Layout --- */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--padding-inline);
+}
+
+/* --- Header & Nav --- */
+
+header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-brand:hover {
+  color: var(--color-primary);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+/* --- Main Content --- */
+
+main {
+  padding-block: 3rem;
+}
+
+/* --- Typography --- */
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  margin-block: 0 0.5em;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  line-height: 1.3;
+  margin-block: 1.5em 0.5em;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.4;
+  margin-block: 1.25em 0.5em;
+}
+
+p {
+  max-width: 65ch;
+  margin-block: 0 1em;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+ul,
+ol {
+  padding-inline-start: 1.5rem;
+}
+
+li {
+  margin-block: 0.25em;
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 640px) {
+  :root {
+    --padding-inline: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  main {
+    padding-block: 2rem;
+  }
 }
